@@ -23,17 +23,17 @@
             text-transform: uppercase;
             text-align: center;
             
-            /* Градиентный текст */
+          
             background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #0000ff, #8000ff, #ff0080);
             background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             
-            /* Анимация градиента */
+            
             animation: gradientShift 3s ease infinite;
             
-            /* Тень для объема */
+            
             text-shadow: 4px 4px 0 #000, 
                         8px 8px 0 rgba(0,0,0,0.3);
             
@@ -47,7 +47,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Неоновое свечение */
+       
         .murino-ebet-parnas::before {
             content: '';
             position: absolute;
@@ -63,7 +63,7 @@
             border-radius: 10px;
         }
 
-        /* Дополнительный бэкграунд */
+  
         .murino-ebet-parnas::after {
             content: '';
             position: absolute;
@@ -76,14 +76,14 @@
             border-radius: 5px;
         }
 
-        /* Анимация градиента */
+    
         @keyframes gradientShift {
             0% { background-position: 0% 50% }
             50% { background-position: 100% 50% }
             100% { background-position: 0% 50% }
         }
 
-        /* Анимация пульсации */
+        
         @keyframes pulse {
             from { 
                 opacity: 0.5; 
@@ -97,7 +97,7 @@
             }
         }
 
-        /* Адаптивность */
+       
         @media (max-width: 1200px) {
             .murino-ebet-parnas {
                 font-size: 4rem;
@@ -121,7 +121,7 @@
             }
         }
 
-        /* Эффект при наведении */
+    
         .murino-ebet-parnas:hover {
             transform: scale(1.05) rotate(1deg);
             border-image: linear-gradient(45deg, #00ff00, #0080ff, #ff0000);
@@ -129,7 +129,7 @@
             cursor: pointer;
         }
 
-        /* Анимация частиц */
+      
         .particles {
             position: fixed;
             top: 0;
@@ -174,7 +174,7 @@
     </div>
 
     <script>
-        // Создание частиц
+        
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
@@ -183,7 +183,7 @@
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 
-                // Случайная позиция
+               
                 particle.style.left = Math.random() * 100 + 'vw';
                 particle.style.background = getRandomColor();
                 particle.style.animationDelay = Math.random() * 6 + 's';
@@ -198,10 +198,10 @@
             return colors[Math.floor(Math.random() * colors.length)];
         }
         
-        // Запуск при загрузке
+        
         document.addEventListener('DOMContentLoaded', createParticles);
         
-        // Добавляем клик-эффект
+       
         document.querySelector('.murino-ebet-parnas').addEventListener('click', function() {
             this.style.animation = 'none';
             setTimeout(() => {
